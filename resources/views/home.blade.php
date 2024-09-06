@@ -105,7 +105,16 @@
 
         </blockquote>
         <a href="/about" class="btn">Masuk</a>
+        <h1>Pesan dari Form</h1>
+
+        <!-- Cek jika pesan ada -->
+    @if(isset($message))
+        <p>Pesan: {{ $message }}</p>
+    @else
+        <p>Tidak ada pesan yang dikirim.</p>
+    @endif
     </div>
+
 
 
 </body>
