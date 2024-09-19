@@ -4,6 +4,7 @@ use App\Http\Controllers\RelasiController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\RumahController;
+use App\Http\Controllers\SchoolController;
 use Illuminate\Support\Facades\Route;
 
 //Route::get('/', function () {
@@ -31,3 +32,4 @@ Route::post('/create',[StoreController::class,'store']);
 Route::get('/ktp',[RelasiController::class,'index']);
 Route::get('/pengguna/create',[RelasiController::class,'create']);
 Route::post('/pengguna/store',[RelasiController::class,'store']);
+Route::get('/school', [SchoolController::class, 'index']);
