@@ -6,6 +6,7 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\RumahController;
 use App\Http\Controllers\SchoolController;
 use App\Http\Controllers\SekolahController;
+use App\Http\Controllers\PdfController;
 use Illuminate\Support\Facades\Route;
 
 //Route::get('/', function () {
@@ -35,3 +36,5 @@ Route::get('/pengguna/create',[RelasiController::class,'create']);
 Route::post('/pengguna/store',[RelasiController::class,'store']);
 Route::get('/school', [SchoolController::class, 'index']);
 Route::get('/sekolah', [SekolahController::class, 'index']);
+Route::get('/generate-pdf', [PdfController::class, 'generatePDF']);
+Route::get('/stream-pdf', [PdfController::class, 'streamPDF']);
